@@ -1,0 +1,145 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+/*NAVBAR*/
+
+.nav {
+background-color: #2D2926FF;
+width: 100%;
+position: fixed;
+padding: 1vh 1vw;
+font-size: 4vh; 
+top: 0;
+border: 1em solid 000000;
+right: 0;
+}
+
+.nav a {
+	text-decoration: none;
+	padding: 1vh 1vw;
+	color: ffe6e6;
+	float: right;
+}
+
+/*HOME*/
+
+#home {
+	background-color: 000000;
+	width: 100%;
+	height: 100%;
+	text-align: center; 
+}
+
+#home h1 {
+	color: F8F4FC;
+	font-size: 25vh; 
+	font-family: 'Dosis', sans-serif; 
+	padding-top: 20vh;
+}
+
+/*ABOUT*/
+
+#about {
+	background-color: #E94B3CFF;
+	background-image: url("tag.jpg");
+	background-repeat: no-repeat; 
+	width: 100%;
+	text-align: center;
+	height: 100%;
+	background-size: 1400px 667px ;
+	background-attachment: fixed;
+}
+
+#about.box {
+	float: center;
+}
+
+.box{
+	background-color: rgb(255, 255, 255, 0.7);
+	width: 100%;
+	height: 100%;
+}
+
+.box h2 {
+	font-size: 20vh;
+	font-family: 'Dosis', sans-serif;
+	color: 000000;
+	padding: 0;
+	margin: 0;
+}
+
+.box p {
+	font-size: 5vh;
+	font-family: 'Dosis', sans-serif;
+	color: 000000;
+	padding-right: 5vw;
+	padding-left: 5vw;
+	padding-bottom: 5vh;
+}
+
+/*EVENTS*/
+
+#events {
+	background-color: 000000;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+#events h2 {
+	font-size: 20vh;
+	font-family: 'Dosis', sans-serif;
+	color: ffffff;
+	padding: 0;
+	margin: 0;
+}
+
+.cards {
+	display: block;
+	border-radius: 50%;
+	width: 15vw;
+	height: 30vh;
+	margin-left:7vw;
+	float: left;
+	color: 000000;
+	font-size:15px; 
+	font-family: arial;
+	background-color: 000000;
+	margin-top: 5vh
+
+}
+
+.cards i {
+	color:white;
+	margin: 3vh;
+	margin-top: 5vh;
+	margin-bottom: 0;
+	font-size: 5vw;
+}
+
+	
+.cards h3 {
+	color: ffffff;
+	font-size: 5vh;
+	font-family: 'Dosis', sans-serif;
+}
+
+.cards:hover {
+	background-color: white;
+	color:000000;
+}
+
+.cards:hover i{
+	color: 000000;
+}
+
+.cards:hover h3 {
+	color: 000000;
+}
+
+
+
+
