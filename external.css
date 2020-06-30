@@ -7,38 +7,86 @@
 /*NAVBAR*/
 
 .nav {
-background-color: #2D2926FF;
-width: 100%;
-position: fixed;
-padding: 1vh 1vw;
-font-size: 4vh; 
-top: 0;
-border: 1em solid 000000;
-right: 0;
+    background-color: transparent;
+    width: 100%;
+    position: fixed;
+    padding: 1vh 2vw;
+    padding-top: 3vh;
+    font-size: 4vh; 
+    top: 0;
+    border: 1em solid 000000;
+    right: 0;
+    text-align: center;
 }
 
 .nav a {
 	text-decoration: none;
-	padding: 1vh 1vw;
-	color: ffe6e6;
-	float: right;
+	padding: 1vh 4vw;
+	color: rgba(255,255,255,0.7);
+	font-family: 'Dosis', sans-serif; 
+}
+
+
+.nav a:hover {
+	color: rgb(255,255,255);
 }
 
 /*HOME*/
 
 #home {
 	background-color: 000000;
+	background-image:url(ordin.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position: top-center;
 	width: 100%;
 	height: 100%;
 	text-align: center; 
+}
+
+.overlay {
+	background-color: rgba(0,0,0,0.1);
+	height:100%;
+	width:100%;
+	max-width:100%;
+	overflow-x:hidden;
+}
+
+.overlay::before {
+	background-image:url(ordin.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position: top-right;
+	height:100%;
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	content:"";
+	z-index:-1;
 }
 
 #home h1 {
 	color: F8F4FC;
 	font-size: 25vh; 
 	font-family: 'Dosis', sans-serif; 
-	padding-top: 20vh;
+	padding-top: 25vh;
 }
+ 
+#home h2 {
+	color:F8F4FC;
+	font-size:5vh;
+	font-family:'Dosis', sans-serif;
+	
+}
+
+/*ANIMATION*/
+
+@keyframes fadein{
+	from {opacity:10%;}
+	to{opacity:100%;}
+}
+
 
 /*ABOUT*/
 
@@ -47,9 +95,9 @@ right: 0;
 	background-image: url("tag.jpg");
 	background-repeat: no-repeat; 
 	width: 100%;
+	height: auto;
 	text-align: center;
-	height: 100%;
-	background-size: 1400px 667px ;
+	background-size: cover;
 	background-attachment: fixed;
 }
 
@@ -57,10 +105,13 @@ right: 0;
 	float: center;
 }
 
+
 .box{
 	background-color: rgb(255, 255, 255, 0.7);
 	width: 100%;
-	height: 100%;
+	height: auto;
+	padding: 3vh;
+	padding-bottom:6vh;
 }
 
 .box h2 {
@@ -77,16 +128,17 @@ right: 0;
 	color: 000000;
 	padding-right: 5vw;
 	padding-left: 5vw;
-	padding-bottom: 5vh;
+	padding-bottom: 0;
 }
 
 /*EVENTS*/
 
 #events {
-	background-color: 000000;
+	background-color: rgb(0,0,0);
 	width: 100%;
-	height: 100%;
+	height: auto;
 	text-align: center;
+	padding: 2vh;
 }
 
 #events h2 {
@@ -98,18 +150,16 @@ right: 0;
 }
 
 .cards {
-	display: block;
+	display: inline-block;
 	border-radius: 50%;
-	width: 15vw;
-	height: 30vh;
-	margin-left:7vw;
-	float: left;
+	width: 23vw;
+	height: 44vh;
 	color: 000000;
 	font-size:15px; 
-	font-family: arial;
+	font-family: 'Dosis', sans-serif;
 	background-color: 000000;
-	margin-top: 5vh
-
+	margin:2vh;
+	transition: 0.3s;
 }
 
 .cards i {
@@ -127,6 +177,13 @@ right: 0;
 	font-family: 'Dosis', sans-serif;
 }
 
+.cards p {
+	color: rgba(255,255,255,0.5) ;
+	padding: 2vh;
+	font-size: 4vh;
+	
+}
+
 .cards:hover {
 	background-color: white;
 	color:000000;
@@ -140,6 +197,198 @@ right: 0;
 	color: 000000;
 }
 
+.cards:hover p {
+	color: rgba(0,0,0,0.5);
+}
 
 
+/*GUIDELINE*/
 
+#guidelines{
+	padding:0;
+	width:100%;
+	height:auto;
+	background-color:000000;
+}
+
+#guidelines hr{
+	color:rgb(255,255,255);
+	width:70%;
+	margin:auto;
+	margin-bottom:5vh;
+}
+
+#guidelines h2{
+	text-align:center;
+	font-family: 'Dosis', sans-serif;
+	font-size:15vh;
+	color:ffffff;
+}
+
+#guidelines ul{
+	list-style-type:disc;
+	padding:5vh;
+	padding-left:30vh;
+	padding-right:30vh;
+	color:rgb(255,255,255);
+	font-family:'Dosis', sans-serif;
+	font-size:3.5vh;
+}
+
+#guidelines a{
+	color:blue;
+	text-decoration:none;
+}
+
+/*TEASER*/
+
+#teaser {
+	background-color:000000;
+	text-align:center;
+	height:auto;
+	width:100%;
+	font-family:'Dosis', sans-serif;
+    padding:0vh;	
+}
+
+#teaser h2{
+	padding-top:5vh;
+	font-size:15vh;
+	color:rgb(255,255,255);
+}
+
+#teaser hr{
+	color:rgb(255,255,255);
+	width:70%;
+	margin:auto;
+}
+
+
+#teaser video{
+	height:60vh;
+	width:60vw;
+	margin:10vh;
+}
+
+/*TEAM*/
+
+#team {
+	background-color: ffe6e6;
+	width:100%;
+	height: auto;	
+	padding:2vh;
+}
+
+#team h2 {
+	font-size: 20vh;
+	font-family:'Dosis', sans-serif ;
+	color:rgb(0,0,0);
+	margin:0;
+    text-align:center; 
+}
+
+.border {
+	display: block;
+	background-color: rgb(0,0,0);
+	width:100%;
+	max-width:100%;
+	height:auto;
+	text-align: left;
+}
+
+.content {
+	background-color:ffe6e6;
+	max-width:100%;
+	height:auto;
+	margin-left:2vh;
+	margin-right:2vh;
+	text-align:center;
+}
+
+.bio {
+	display: inline-block;
+	border-radius:5%;
+	background-color: ffe6e6;
+	padding: 2vh;
+	width: 22vw;
+	height: auto;
+	margin: 4vh;
+	text-align:center;
+	transition:0.3s;
+}
+
+.bio img {
+	border-radius:50%;
+	border-width: 0.5vh;
+	border-color:rgb(0,0,0,);
+	border-style: solid;
+	height: 17vw;
+	width:17vw;
+	margin:auto;
+}
+
+.bio h3 {
+	font-family: 'Dosis', sans-serif;
+	font-size:4vh;
+	color:000000;
+	padding:2vh;
+	padding-bottom:0;
+}
+
+.bio p {
+	font-family:'Dosis', sans-serif;
+	color:rgba(0,0,0,0.7);
+	padding:2vh;
+	font-size:3vh;
+}
+
+.bio hr {
+	color: 000000;
+}
+
+.bio:hover {
+	background-color:rgb(0,0,0);
+}
+
+.bio:hover img {
+	border-style:outset;
+	border-color: ffe6e6;
+}
+
+.bio:hover h3 {
+	color: rgb(250,230,230);
+}
+
+.bio:hover p {
+	color:rgba(250,230,230,0.8);
+}
+
+.bio:hover hr {
+	color:ffe6e6;
+}
+
+
+/*COPYRIGHT*/
+
+#copyright {
+	background-color: rgb(0,0,0);
+	width:100%;
+	height:auto;
+	text-align:center;
+	font-family:'Dosis', sans-serif;
+	color:ffffff;
+	padding:5vh;
+}
+
+#copyright h2{
+    font-size:20vh;
+}
+
+#copyright h3 {
+	font-size:5vh;
+}
+
+#copyright p{
+	padding-top:3vh;
+	font-size:4vh;
+}
